@@ -138,6 +138,8 @@ the engine source code (using ``cd``) and type::
 
 .. note:: When compiling with multiple CPU threads, SCons may warn about
           pywin32 being missing. You can safely ignore this warning.
+          
+          Also take note that it takes multiple minutes to compile Godot.
 
 If all goes well, the resulting binary executable will be placed in
 ``C:\godot\bin\`` with the name ``godot.windows.tools.32.exe`` or
