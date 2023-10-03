@@ -95,26 +95,26 @@ released.
 
     using Godot;
 
-    public partial class Character : CharacterBody2D
+    public partial class Player : CharacterBody2D
     {
-        private AnimatedSprite2D _animatedSprite;
-
-        public override void _Ready()
-        {
-            _animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
-        }
-
-        public override _Process(float _delta)
-        {
-            if (Input.IsActionPressed("ui_right"))
-            {
-                _animatedSprite.Play("run");
-            }
-            else
-            {
-                _animatedSprite.Stop();
-            }
-        }
+    	private AnimatedSprite2D _animatedSprite;
+    
+    	public override void _Ready()
+    	{
+    		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    	}
+    
+    	public override void _Process(double _delta)
+    	{
+    		if (Input.IsActionPressed("ui_right"))
+    		{
+    			_animatedSprite.Play("run");
+    		}
+    		else
+    		{
+    			_animatedSprite.Stop();
+    		}
+    	}
     }
 
 
